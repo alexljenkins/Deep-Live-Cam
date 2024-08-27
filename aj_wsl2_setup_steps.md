@@ -34,6 +34,16 @@ poetry add onnxruntime-silicon==1.13.1
 
 ### Update to GPU versions of packages
 
+Pass usb ports to WSL: https://learn.microsoft.com/en-us/windows/wsl/connect-usb#attach-a-usb-device
+
+Powershell:
+usbipd list
+usbipd bind --busid x-x
+usbipd attach --wsl --busid x-x
+
+WSL:
+https://github.com/PINTO0309/wsl2_linux_kernel_usbcam_enable_conf?tab=readme-ov-file
+
 ``` bash
 onnxruntime-silicon==1.13.1 onnxruntime-gpu==1.16.3
 ```
@@ -42,3 +52,6 @@ onnxruntime-silicon==1.13.1 onnxruntime-gpu==1.16.3
 poetry remove onnxruntime onnxruntime-gpu
 poetry add onnxruntime-gpu==1.16.3
 ```
+https://learn.microsoft.com/en-us/windows/wsl/connect-usb
+https://www.youtube.com/watch?v=t_YnACEPmrM
+https://agiledevart.github.io/wsl2_usb_camera.txt
